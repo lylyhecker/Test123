@@ -1090,7 +1090,7 @@
   customWhiteThreshold: CONFIG.WHITE_THRESHOLD,
   resizeSet
   // [MULTI-TOKEN PATCH] === TokenPool / PixelQueue / PaintScheduler ===
-  class TokenPool {
+;class TokenPool {
     constructor(genFn, opts) {
       this._genFn = genFn;
       this._prefetch = opts?.prefetch ?? 6;
@@ -1145,8 +1145,7 @@
     }
     size() { return this._pool.length; }
   }
-
-  class PixelQueue {
+;class PixelQueue {
     constructor(pixels) {
       this._list = Array.isArray(pixels) ? pixels.slice() : [];
       this._idx = 0;
@@ -1157,8 +1156,7 @@
     }
     remaining() { return Math.max(0, this._list.length - this._idx); }
   }
-
-  class PaintScheduler {
+;class PaintScheduler {
     constructor({ tokenPool, concurrency, retryLimit, retryBaseDelay, onPixelDone }) {
       this.tokenPool = tokenPool;
       this.concurrency = concurrency;
@@ -1238,7 +1236,7 @@ tings: null,
   let _resizeDialogCleanup = null;
 
   // --- OVERLAY UPDATE: Optimized OverlayManager class with performance improvements ---
-  class OverlayManager {
+;class OverlayManager {
     constructor() {
       this.isEnabled = false;
       this.startCoords = null; // { region: {x, y}, pixel: {x, y} }
@@ -2773,7 +2771,7 @@ tings: null,
   }
 
   // IMAGE PROCESSOR CLASS
-  class ImageProcessor {
+;class ImageProcessor {
     constructor(imageSrc) {
       this.imageSrc = imageSrc
       this.img = null
